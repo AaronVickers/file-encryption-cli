@@ -38,11 +38,11 @@ int main(int argc, char *argv[]) {
                     printf("Encrypted %d file(s) in %s!\n", result->attempts, argv[i]);
                 } else {
                     // Print no files found
-                    printf("No files found to encrypt.\n");
+                    printf("No files found to encrypt in %s.\n", argv[i]);
                 }
             } else {
                 // Print number of fails
-                printf("Failed to encrypt %d/%d file(s).\n", result->fails, result->attempts);
+                printf("Failed to encrypt %d/%d file(s) in %s.\n", result->fails, result->attempts, argv[i]);
             }
 
             // Free result
@@ -66,11 +66,11 @@ int main(int argc, char *argv[]) {
                     printf("Decrypted %d file(s) in %s!\n", result->attempts, argv[i]);
                 } else {
                     // Print no files found
-                    printf("No files found to decrypt.\n");
+                    printf("No files found to decrypt in %s.\n", argv[i]);
                 }
             } else {
                 // Print number of fails
-                printf("Failed to decrypt %d/%d file(s).\n", result->fails, result->attempts);
+                printf("Failed to decrypt %d/%d file(s) in %s.\n", result->fails, result->attempts, argv[i]);
             }
 
             // Free result
